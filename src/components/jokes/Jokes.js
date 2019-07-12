@@ -4,7 +4,8 @@ import Joke from "./Joke"
 
 function Jokes() {
     return (
-        <div>
+        <div className="jokes">
+            
             <Joke punchLine="It’s hard to explain puns to kleptomaniacs because they always take things literally." />
             
             <Joke 
