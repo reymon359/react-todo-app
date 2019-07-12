@@ -8,29 +8,20 @@ import Jokes from './components/jokes/Jokes';
 // import './App.css';
 
 function App() {
-    return (
+  return (
 
-        <
-        div >
-        <
-        Header / >
-        <
-        div className = "todo-list" >
-        <
-        TodoItem / >
-        <
-        TodoItem / >
-        <
-        TodoItem / >
-        <
-        TodoItem / >
-        <
-        /div> <
-        Jokes / >
-        <
-        /div>
+    <div>
+      <Header />
+      <div className="todo-list">
+        <TodoItem />
+        <TodoItem />
+        <TodoItem />
+        <TodoItem />
+      </div>
+        <Jokes />
+    </div>
 
-    );
+  );
 }
 
 export default App;

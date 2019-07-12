@@ -19,7 +19,7 @@ function Header(){
         <header className="navbar">
             <div>Todo App</div> 
             <small>Good {timeOfDay}! Here you can write your tasks</small>
-            </header>
+        </header>
     )
 
 }
