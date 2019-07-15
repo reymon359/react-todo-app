@@ -1,5 +1,6 @@
 import React from 'react';
 import TodoItem from './TodoItem';
+import todosData from './todosData';
 
 // Components
 import Header from './components/Header';
@@ -8,15 +9,15 @@ import Jokes from './components/jokes/Jokes';
 // import './App.css';
 
 function App() {
-  return (
+  const todoItems = todosData.map(item => <TodoItem key={item.id} item={item}  />)
 
+
+
+  return (
     <div>
       <Header />
       <div className="todo-list">
-        <TodoItem />
-        <TodoItem />
-        <TodoItem />
-        <TodoItem />
+        {todoItems}
       </div>
         <Jokes />
     </div>
