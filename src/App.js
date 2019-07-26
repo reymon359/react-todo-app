@@ -8,21 +8,28 @@ import Jokes from './components/jokes/Jokes';
 // import logo from './logo.svg';
 // import './App.css';
 
-function App() {
-  const todoItems = todosData.map(item => <TodoItem key={item.id} item={item}  />)
+class App extends React.Component {
+  constructor() {
+    super()
+    this.state = {
+        todos: todosData
+    }
+  }
 
-
-
-  return (
-    <div>
-      <Header />
+  render() {
+    const todoItems = this.state.todos.map(item => <TodoItem key={item.id} item={item}/>)
+    
+    return (
+      <div>
+        <Header />
       <div className="todo-list">
         {todoItems}
       </div>
         <Jokes />
-    </div>
-
-  );
+      </div>
+    )    
+  }
+  
 }
 
 export default App;
