@@ -11,6 +11,7 @@ function Jokes() {
     
     return (
         <div  className="jokes">
+            <b>By the way here are some jokes😄.</b>
             {jokeComponents}            
         </div>
     )
