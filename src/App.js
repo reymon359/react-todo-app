@@ -13,15 +13,25 @@ class App extends React.Component {
   constructor() {
     super()
     this.state = {
-        todos: todosData
+        todos: todosData,
+        isLoading: true
     }
     this.handleChange = this.handleChange.bind(this)
   }
 
+  // Fake Loader
+  componentDidMount() {
+    setTimeout(() => {
+        this.setState({
+            isLoading: false
+        })
+    }, 2000)
+  }
+
+
   // Creating a new array where if the item has the same id as the
   // one passed in the params we change its completed value
   handleChange(id) {
-    
     this.setState(prevState => {
       const updatedTodos = prevState.todos.map(todo => {
           if (todo.id === id) {
