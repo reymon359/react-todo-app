@@ -56,7 +56,10 @@ class App extends React.Component {
       <div className="todo-list">
         {todoItems}
       </div>
-        <Jokes />
+
+      {this.state.isLoading ?
+      <h1 style={{textAlign: "center"}}>Loading...</h1> :
+        <Jokes />}        
       </div>
     )    
   }
