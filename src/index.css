@@ -84,3 +84,10 @@ input[type=checkbox]:focus {
 .jokes span {
     font-size: 26px;
 }
+
+
+/* todo form */
+
+.new-todo-form {
+    text-align: center;
+}

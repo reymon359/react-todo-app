@@ -18,6 +18,7 @@ class App extends React.Component {
         newTodo: ""
     }
     this.handleChange = this.handleChange.bind(this)
+    this.handleFormChange = this.handleFormChange.bind(this)
   }
 
   // Fake Loader
@@ -46,6 +47,14 @@ class App extends React.Component {
     })
   }
   
+  // New todo form
+  handleFormChange(event){
+    const {name, value} = event.target
+    this.setState({
+        [name]: value
+    })
+  }
+
   render() {
     const todoItems = this.state.todos.map(item => <TodoItem key={item.id} item={item}
     handleChange={this.handleChange }
@@ -55,10 +64,11 @@ class App extends React.Component {
       <div>
         <Header />
         <div className="new-todo-form">
-        <form>
-        <input placeholder="First Name" /><br />
-        <button>Submit</button>
-        </form>
+          <form>
+          <input name="newTodo" value={this.state.newTodo} onChange={this.handleFormChange} placeholder="Add a new todo" /><br />
+          <button>Submit</button>
+          </form>
+        {this.state.newTodo}
         </div>
        
         <div className="todo-list">
