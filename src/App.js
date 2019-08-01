@@ -19,6 +19,7 @@ class App extends React.Component {
     }
     this.handleChange = this.handleChange.bind(this)
     this.handleFormChange = this.handleFormChange.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this)
   }
 
   // Fake Loader
@@ -41,9 +42,7 @@ class App extends React.Component {
           }
           return todo
       })
-      return {
-          todos: updatedTodos
-      }
+      return { todos: updatedTodos }
     })
   }
   
@@ -55,6 +54,26 @@ class App extends React.Component {
     })
   }
 
+  handleSubmit(event){
+    
+    const newTodo =  {
+      id: this.state.todos.length + 1,
+      text: this.state.newTodo,
+      completed: false
+    }
+    this.state.todos.push(newTodo);
+    event.preventDefault();
+    
+    // return false;
+    // console.log(newTodo);
+    // this.setState(prevState => {
+    //   const updatedTodos = prevState.todos.push(newTodo);
+    //   return { todos: updatedTodos }
+    // })
+    
+   
+  }
+
   render() {
     const todoItems = this.state.todos.map(item => <TodoItem key={item.id} item={item}
     handleChange={this.handleChange }
@@ -64,7 +83,8 @@ class App extends React.Component {
       <div>
         <Header />
         <div className="new-todo-form">
-          <form>
+          <h3>Add a new Todo</h3>
+          <form onSubmit={this.handleSubmit}>
           <input name="newTodo" value={this.state.newTodo} onChange={this.handleFormChange} placeholder="Add a new todo" /><br />
           <button>Submit</button>
           </form>
