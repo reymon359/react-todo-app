@@ -14,7 +14,6 @@ class App extends React.Component {
     this.state = {
         todos: todosData,
         isLoading: true,
-
         newTodo: ""
     }
     this.handleChange = this.handleChange.bind(this)
