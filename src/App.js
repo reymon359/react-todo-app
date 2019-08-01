@@ -55,7 +55,6 @@ class App extends React.Component {
   }
 
   handleSubmit(event){
-    
     const newTodo =  {
       id: this.state.todos.length + 1,
       text: this.state.newTodo,
@@ -63,15 +62,8 @@ class App extends React.Component {
     }
     this.state.todos.push(newTodo);
     event.preventDefault();
-    
-    // return false;
-    // console.log(newTodo);
-    // this.setState(prevState => {
-    //   const updatedTodos = prevState.todos.push(newTodo);
-    //   return { todos: updatedTodos }
-    // })
-    
-   
+    this.render();
+    this.setState({newTodo: ""})
   }
 
   render() {
@@ -88,7 +80,6 @@ class App extends React.Component {
           <input name="newTodo" value={this.state.newTodo} onChange={this.handleFormChange} placeholder="Add a new todo" /><br />
           <button>Submit</button>
           </form>
-        {this.state.newTodo}
         </div>
        
         <div className="todo-list">
