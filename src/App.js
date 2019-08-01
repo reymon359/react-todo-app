@@ -61,7 +61,7 @@ class App extends React.Component {
       text: this.state.newTodo,
       completed: false
     }
-    this.state.todos.push(newTodo);
+    this.state.todos.unshift(newTodo);
     event.preventDefault();
     this.render();
     this.setState({newTodo: ""})
