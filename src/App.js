@@ -76,7 +76,6 @@ class App extends React.Component {
       <div>
         <Header />
         <div className="new-todo-form">
-          <h3>Add a new Todo</h3>
           <form onSubmit={this.handleSubmit}>
           <input name="newTodo" value={this.state.newTodo} onChange={this.handleFormChange} placeholder="New task" /><br />
           <button disabled={this.state.newTodo === ""} >Submit</button>
