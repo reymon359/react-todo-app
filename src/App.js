@@ -55,6 +55,7 @@ class App extends React.Component {
   }
 
   handleSubmit(event){
+    
     const newTodo =  {
       id: this.state.todos.length + 1,
       text: this.state.newTodo,
@@ -77,8 +78,8 @@ class App extends React.Component {
         <div className="new-todo-form">
           <h3>Add a new Todo</h3>
           <form onSubmit={this.handleSubmit}>
-          <input name="newTodo" value={this.state.newTodo} onChange={this.handleFormChange} placeholder="Add a new todo" /><br />
-          <button>Submit</button>
+          <input name="newTodo" value={this.state.newTodo} onChange={this.handleFormChange} placeholder="New task" /><br />
+          <button disabled={this.state.newTodo === ""} >Submit</button>
           </form>
         </div>
        
