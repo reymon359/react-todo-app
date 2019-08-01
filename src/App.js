@@ -5,7 +5,6 @@ import todosData from './todosData';
 // Components
 import Header from './components/Header';
 import Jokes from './components/jokes/Jokes';
-import { runInThisContext } from 'vm';
 // import logo from './logo.svg';
 // import './App.css';
 
@@ -14,7 +13,9 @@ class App extends React.Component {
     super()
     this.state = {
         todos: todosData,
-        isLoading: true
+        isLoading: true,
+
+        newTodo: ""
     }
     this.handleChange = this.handleChange.bind(this)
   }
@@ -53,13 +54,20 @@ class App extends React.Component {
     return (
       <div>
         <Header />
-      <div className="todo-list">
-        {todoItems}
-      </div>
+        <div className="new-todo-form">
+        <form>
+        <input placeholder="First Name" /><br />
+        <button>Submit</button>
+        </form>
+        </div>
+       
+        <div className="todo-list">
+          {todoItems}
+        </div>
 
-      {this.state.isLoading ?
-      <h1 style={{textAlign: "center"}}>Loading...</h1> :
-        <Jokes />}        
+        {this.state.isLoading ?
+        <h1 style={{textAlign: "center"}}>Loading...</h1> :
+          <Jokes />}        
       </div>
     )    
   }
