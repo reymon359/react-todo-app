@@ -128,3 +128,16 @@ input[type=checkbox]:focus {
 .new-todo-form form button:hover {
     box-shadow: inset 0px 0px 0px 2px white;
 }
+
+.footer {
+    margin-top: 5vh;
+    padding: 10px;
+    border-top: 2px solid lightgray;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.footer a {
+    text-decoration: none;
+    margin: 0 10px;
+}

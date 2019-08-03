@@ -88,6 +88,11 @@ class App extends React.Component {
         {this.state.isLoading ?
         <h1 style={{textAlign: "center"}}>Loading...</h1> :
           <Jokes />}        
+
+        <footer className="footer">
+          <a href="https://ramonmorcillo.com" >ramon morcillo @reymon359 </a>
+          <a href="https://github.com/reymon359/react-todo-app">Source code</a>
+        </footer>
       </div>
     )    
   }
