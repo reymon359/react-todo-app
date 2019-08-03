@@ -9,7 +9,7 @@ function Header(){
     
     if (hours < 12) {
       timeOfDay = "morning"
-    } else if (hours >= 12 && hours < 17) {
+    } else if (hours >= 12 && hours < 19) {
       timeOfDay = "afternoon"
     } else {
       timeOfDay = "night"
