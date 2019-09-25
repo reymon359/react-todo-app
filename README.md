@@ -1,3 +1,8 @@
+# React Todo App
+
+#### React todo app I did in the [scrimba course](https://scrimba.com/g/glearnreact)
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
